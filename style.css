@@ -1,0 +1,32 @@
+h1 {text-decoration: underline; font-size: 40px;}
+h3 {text-decoration: underline; font-size: 25px;}
+body {background-color: #5c09a0; color:white; font-family:arial; text-align: center; }
+.pack {display: flex; justify-content: center;}
+.Title {display: flex; justify-content: center;}
+.conc {border: 3px solid white; }
+table, th, td  {margin-left: auto; margin-right: auto; border: 1px solid white;}
+th, td  {padding:10px}
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}

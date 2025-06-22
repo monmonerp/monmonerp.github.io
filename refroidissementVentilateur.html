@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Monmonerp's blog</title>
+    <!--  <link rel="stylesheet" media="screen" type="text/css" title="designindex" href="projetFraise.css" />  -->
+</head>
+
+<body>
+    <a href="index.html">🏠 Maison 🏠</a>
+    <div class="Title">
+        <h1>Etude d'un refroidissement par ventilateur</h1>
+    </div>
+
+    <div class="Intro">
+        <p>L'objectif de cette page est d'étudier le refroidissement d'une pièce avec un montage simple constitué d'un ventilateur et de bandelettes imbibées d'eau.</p>
+        <img src="Images/RefroidissementVentilateur/Schéma.png" alt="Schéma" height="300">
+        <p>Pour cela j'ai accroché des bandelettes imbibées d'eau sur un ventilateur et j'ai fait une étude théorique du phénomène.</p>
+    </div>
+    <h2>------------------------------------------------------------</h2>
+    <div class="sopalin">
+        <h1>Etude théorique</h1>
+        <p>Quand l'eau s'évapore, elle absorbe une quantité d'énergie sous la forme d'énergie thermiquece qui refroidit les alentours.</p>
+        <p>On note Δ<sub>r</sub>H<sup>0</sup> l'enthalpie de vaporisation de l'eau (l'énergie absorbée / liberée (+/-) par unité de masse d'eau vaporisée) : Δ<sub>r</sub>H<sup>0</sup> ≈ 2400 J/g à ≈25°C (source : <a href="https://www.thermexcel.com/french/tables/vap_eau.htm">Thermexcel</a>)</p>
+        <p>A l'aide de la <a href=imbibition.html>recherche d'imbibité de l'eau pour différents matériaux</a>, on a que le matériau optimal pour une utilisation ménagère est le Sopalin (capacité d'imbibité élevée et solide aux déchirements) avec une imbibité de 310 g/m<sup>2</sup></p>
+        <p>On utilise des bandelettes de Sopalin de dimension 20 cm x 3 cm </p>
+        <img src="Images/RefroidissementVentilateur/bandelette.png" alt="bandelette" height="500">
+        <p> ‎ </p>
+        <p>Avec les données d'imbibité, on trouve la masse d'eau stockable par une bandelette : m<sub>eau, stockée</sub> = Imbibité * Surface = 310 g/m<sup>2</sup> * 0.20 m * 0.03 m = 1.86 g</p>
+        <p>On place la bandelette devant un ventilateur de vitesse d'air de ≈ 5 m/s, et on mesure le temps nécessaire pour que la bandelette se sèche</p>
+        <p>On mesure un temps de 15 minutes de séchage : dans ce laps de temps, 1.86 g d'au se sont évaporées donc une énergie de Δ<sub>r</sub>H<sup>0</sup>*m = 2400*1.86 = 4464 J a été absorbée.</p>
+        <p>Pour calculer la puissance moyenne de refroidissement, on divise l'énergie absorbée pendant 15 minutes par ce laps de temps : P = E/Δt = 4464/(15*60) = 5 W</p>
+        <p> ‎ </p>
+        <p>Pour chaque bandelette, on a une puissance de 5W de refroidissement : si la puissance du ventilateur est d'environ 50 W, en mettant 10 bandelettes, on convertit totalement la puissance du ventilateur en refroidissement !</p>
+        <p>On peut améliorer ce système de refroidissement avec un autre dispositif mais cela sera analysé dans une autre étude :)</p>
+    </div>
+</body>
+</html>
