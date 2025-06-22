@@ -25,7 +25,7 @@
         m : <input type="text" id="mInput" name="fname">
     </div>
     <button id="calculer">Calculer !</button>
-    <p id="résultat">caca</p>
+    <p id="résultat"></p>
     <div class="pack">
             <img src="Images/Anemometre/prototype1.png" alt="prototype1" height="200">
             <p> ‎ ‎ ‎ ‎ ‎ ‎ ‎ </p>
@@ -35,14 +35,60 @@
         </div>
     
     <div class="Title">
-        <h1>Etude d'un refroidissement par ventilateur</h1>
+        <h1>Fabrication d'un anémomètre basique avec un bout de carton et un cure-dent</h1>
     </div>
 
     <div class="Intro">
-        <p>L'objectif de cette page est d'étudier le refroidissement d'une pièce avec un montage simple constitué d'un ventilateur et de bandelettes imbibées d'eau.</p>
-        <img src="Images/RefroidissementVentilateur/Schéma.png" alt="Schéma" height="300">
-        <p>Pour cela j'ai accroché des bandelettes imbibées d'eau sur un ventilateur et j'ai fait une étude théorique du phénomène.</p>
+        <p>L'objectif de cette page est de fabriquer un anémomètre qui est un appareil qui détermine l'ordre de grandeur de la vitesse du vent.</p>
+        <p>On le fabriquera avec des matériaux sommaires : un bout de carton avec les dimensions que vous voulez (juste il faut que vous les notiez pour plus tard), et un cure-dent.</p>
+        <p>J'ai tout d'abord découpé un bout de carton de dimensions 2x11 cm (faites comme vous voulez pour le vôtre :) ) :</p>
+            <img src="Images/Anemometre/carton1.png" alt="Schéma" height="300">
+        <p> ‎ </p>
+        <p>Pour appliquer la formule de calcul de la vitesse du vent (voir fin de la page pour la démonstration de la formule), il me fallait la masse :</p>
+        <p>Si on mesure la masse directement on obtient une valeur nulle (balance peu précise).</p>
+        <div class="pack">
+            <img src="Images/Anemometre/balance1.png" alt="Schéma" height="300">
+        </div>
+        <p>Pour contrer cela, on va mesurer la masse d'un plus grand bout de carton (de surface connue) et, par une règle de trois, on trouve la masse de notre barre de carton.</p>
+        <div class="pack">
+            <img src="Images/Anemometre/carton2.png" alt="Schéma" height="300">
+            <p> ‎ ‎ ‎ ‎ ‎ ‎ ‎ </p>
+            <img src="Images/Anemometre/balance2.png" alt="Schéma" height="300">
+        </div>
+        <p>m<sub>barre</sub> = m<sub>gros bout</sub> * surface<sub>barre</sub> / surface<sub>gros bout</sub> = 0.64 g</p>
+        <p> ‎ </p>
+        <p>La dernière étape (la vraie étape de mesure) consiste à mesurer l'angle entre la barre à l'équilibre (pas de vent) et avec le vent dont la vitesse est à mesurer :</p>
+        <p>On prend la valeur de x et y sur les photos (ou directement à la main si vous avez une règle) :</p>
+        <div class="pack">
+            <img src="Images/Anemometre/ventilo1.png" alt="Schéma" height="300">
+            <p> ‎ ‎ ‎ ‎ ‎ ‎ ‎ </p>
+            <img src="Images/Anemometre/ventilo2.png" alt="Schéma" height="300">
+        </div>
+        <img src="Images/Anemometre/prototype2.png" alt="Schéma" height="300">
+        <p>Avec un peu de trigonomètrie, on trouve la valeur de l'angle (calculé in situ dans le calculateur).</p>
+        <p> ‎ </p>
+        <p>Il vous suffit désormais de rentrer les valeurs mesurées dans le calculateur en haut de la page pour obetnir un approximation de la vitesse du vent !</p>
+        <p>m : masse (g) // l : largeur de la barre (cm) // L : longueur de la barre (cm) // x, y en cm</p>
     </div>
     <h2>------------------------------------------------------------</h2>
+    <h1>Démonstration formule de la vitesse du vent :</h1>
+    <p><b>Système :</b> Barre en carton</p>
+    <p><b>Référentiel :</b> Terrestre supposé galiléen à l'échelle de l'expérience</p>
+    <p><b>Bilan des forces exercées sur le système :</b> Poids P, Force du vent F<sub>vent</sub></p>
+    <p> ‎ </p>
+    <p>P = m * g * u<sub>y</sub> || m : masse, g : constante de gravitation terrestre = 9.81 m/s², u<sub>y</sub> vecteur unitaire dirigé vers le bas</p>
+    <p> ‎ </p>
+    <p>F = P<sub>pression</sub> * S car il s'agit d'une force de pression de l'air sur le système || P<sub>pression</sub> : pression exercée par le vent sur la barre, S : surface projetée sur u<sub>x</sub></p>
+    <p>P<sub>dynamique</sub> s'exprime : P<sub>pression</sub> = 1/2 * ρ<sub>air</sub> * v² || ρ : masse volumique de l'air, v : vitesse du vent</p>
+    <p>S = l * L * cos(angle entre eq et vent appliqué)</p>
+    <p> ‎ </p>
+    <p> ‎ </p>
+    <p>On calcule le moment de ces forces : M<sub>Δ</sub>(P) = [OG(vecteur) ^ P(vecteur)].u<sub>z</sub>(vecteur) = 1/2 * m * r * g * sin(angle)</p>
+    <p>Idem : M<sub>Δ</sub>(F) = -1/4 * r * ρ * v² * l * L * cos(angle)²</p>
+    <p> ‎ </p>
+    <p>On applique le théorème du moment cinétique scalaire à la barre à l'équilibre (L<sub>Δ</sub>(G) = 0) danr un référentiel galiléen :</p>
+    <p>m*r*g*sin(angle) = 1/4*ρ*v²*l*L*cos(angle)²</p>
+    <p>et v = [(4*m*g*sin(angle)) / (ρ*l*L*cos(angle)²)]^(1/2)</p>
+    <img src="Images/Anemometre/v.png" alt="Schéma" height="100">
 </body>
 </html>
